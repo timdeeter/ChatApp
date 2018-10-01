@@ -89,7 +89,15 @@ namespace SecureChatConsole
 
         public static void PostMessage(MessageReceive data)
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            if (data.Username == username)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+            }
+            
             Console.Write("<" + data.Username + "> ");
             Console.ResetColor();
             Console.WriteLine(data.Message);
@@ -134,20 +142,12 @@ namespace SecureChatConsole
             long start = DateTime.Now.Ticks;
             await ConnectionHub.Start();
 
-            //await chatHubProxy.Invoke("JoinChat", connectedServerKey);
-
-            await ConnectionProxy.Invoke("Send",
-            new Object[] {
-                username,
-                "Test Message",
-                connectedServerKey
-            });
+            await ConnectionProxy.Invoke("JoinChat", connectedServerKey);
 
             long end = DateTime.Now.Ticks;
             decimal elapsed = (end - start)/10000;
             elapsed = elapsed / 1000;
             Console.WriteLine("Connected to " + url + " in " + elapsed + " seconds." );
-            
         }
 
         public static bool Register()
