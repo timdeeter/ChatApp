@@ -108,14 +108,14 @@ namespace SecureChatConsole
 
         }
 
-        public static void SendMessage(string message)
+        public static async void SendMessage(string message)
         {
             PostMessage(new MessageReceive()
             {
                 Message = message,
                 Username = username
             });
-            ConnectionProxy.Invoke("Send",
+            await ConnectionProxy.Invoke("Send",
             new Object[] {
                 username,
                 message,
@@ -136,7 +136,7 @@ namespace SecureChatConsole
             connectedServerKey = key;
             ConnectionHub = new HubConnection(url);
             ConnectionProxy = ConnectionHub.CreateHubProxy("ChatHub");
-            ConnectionProxy.On<string, string>("addMessage", (name, message) => 
+            ConnectionProxy.On<string, string>("addChatMessage", (name, message) => 
                 PostMessage(new MessageReceive()
                 {
                     Username = name,
