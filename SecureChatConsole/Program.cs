@@ -93,9 +93,13 @@ namespace SecureChatConsole
             {
                 Console.ForegroundColor = ConsoleColor.Green;
             }
-            else
+            else if (data.Username == "Server")
             {
                 Console.ForegroundColor = ConsoleColor.Blue;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Magenta;
             }
             
             Console.Write("<" + data.Username + "> ");

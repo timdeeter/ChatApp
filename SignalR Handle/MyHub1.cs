@@ -16,6 +16,8 @@ namespace SignalRChat
         public void JoinChat(string connectedKey)
         {
             Groups.Add(Context.ConnectionId, connectedKey);
+            Clients.OthersInGroup(connectedKey).addChatMessage("Server", "Someone has joined the server.");
+
         }
     }
 }
