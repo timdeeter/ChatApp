@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureChatConsole", "SecureChatConsole\SecureChatConsole.csproj", "{3183237E-04BB-4528-AE87-911DBB4FDB9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR Handle", "SignalR Handle\SignalR Handle.csproj", "{7CDC48A3-D475-48D2-9A29-BCB2FF7C98F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3183237E-04BB-4528-AE87-911DBB4FDB9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3183237E-04BB-4528-AE87-911DBB4FDB9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3183237E-04BB-4528-AE87-911DBB4FDB9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CDC48A3-D475-48D2-9A29-BCB2FF7C98F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CDC48A3-D475-48D2-9A29-BCB2FF7C98F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CDC48A3-D475-48D2-9A29-BCB2FF7C98F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CDC48A3-D475-48D2-9A29-BCB2FF7C98F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
