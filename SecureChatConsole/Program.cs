@@ -12,7 +12,7 @@ namespace SecureChatConsole
 {
     class Program
     {
-        static string url = "http://chatconsolesocket.azurewebsites.net/";
+        static string url = "https://chatconsole.azurewebsites.net/";
         static string connectedServerKey = "";
         static string username = "AnonymousUser";
         static bool connected = false;
